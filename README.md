@@ -1,11 +1,11 @@
 # Parcial-2-Wiki
 
-##Diseño
+## Diseño
+
+![Definicion_Variables](Imagenes_Videos/Definicion de variables.png)
 
 
-
-
-##Desarrollo de la implementación
+## Desarrollo de la implementación
 
 Ahora se hablará de la implementación de la solución de CODESYS en el programa OPENPLC.
 
@@ -162,4 +162,15 @@ Despues de haber definido estas variables principales se continuo realizando el 
 ![Arq_OPEN1](Imagenes_Videos/Arq_OPEN1.png)
 ![Arq_OPEN2](Imagenes_Videos/Arq_OPEN2.png)
 
-##Validación de funcionamiento
+## Validación de funcionamiento
+
+*Mencionar aqui el HMi despues de lo mio que habla del OPEN*
+
+Como primer acercamiento a validar el correcto funcionamiento del programa, usando OPENPLC, se comenzaron a hacer pruebas de simulación, ya que se quería comprobar que lo implementado en CODESYS funcionara de manera correcta. En las primeras pruebas, aun sin usar el código para convertir la señal de la salida del contador a algo entendible por el Display LCD, se encontró un error en la programación, el cual consiste en el pin "PV" del CTU, ya que originalmente se tenía un valor de 1, para que el CTU lo contara como satisfactorio y avanzara con la lógica, para así poder activar el reinicio de "Valve_Out" y la variable "End_Process", sin embargo, esta disposición lo lograba permitir que el CTU contara más allá de 1, por lo cual se decidió por dar un valor más alto, casi imposible para una cafetera de este tipo, para así evitar el problema ya mencionado, el valor elegido fue 1000.
+
+Otra de las validaciones que se realizaron y produjeron cambios en la forma en la que se simulaba el proceso, sucedió cuando al simular, se hizo evidente que la variable "Sensor_Cup" iniciaba con un valor de "True" lo cual no permitía iniciar el proceso debido a la lógica de programación Ladder que se siguió, ya que esta variable es de naturaleza cerrada, por lo cual, se tuvo que hacer necesario que cada vez que se iniciara una simulación se forzara el estado en falso de esa variable.
+
+También cabe destacar, que las primeras veces simulo el proceso después de haber implementado el código en C++ para el funcionamiento de un Display LCD externo para reportar el conteo de días, este código, alojado en su archivo separado de texto se borraba cada vez que se simulaba, o se sale del programa, esta complicación después dejo de presentarse cuando se hizo.... (espero encontrar el porqué) 
+
+
+*Hablar del montaje y funcionamiento en fisico, cuando ya exista*
