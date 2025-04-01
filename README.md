@@ -2,7 +2,7 @@
 
 ## Diseño
 
-![Definicion_Variables](Imagenes_Videos/Definicion de variables.png)
+![Definicion_Variables](Imagenes_Videos/Definicion_Variables.png)
 
 
 ## Desarrollo de la implementación
