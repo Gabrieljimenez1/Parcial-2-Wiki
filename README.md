@@ -3,7 +3,11 @@
 ##Diseño
 
 
-Ahora se hablará del diseño de la solución en el programa OPENPLC.
+
+
+##Desarrollo de la implementación
+
+Ahora se hablará de la implementación de la solución de CODESYS en el programa OPENPLC.
 
 En este programa se implementó la simulación más cercana que se puede a lo que se espera que suceda en el mundo real, es por esta razón que se buscó diseñar el programa de tal forma que ya tuviera todas las implementaciones físicas que son particulares de la solución, es decir, lo ya mencionado anteriormente como lo son sensores, sensor infrarrojo, entre otros componentes. Esto mediante principalmente de la capacidad de integrar código en C++ con la programación Ladder del programa OPENCL, de esta manera, se implementó código buscando el funcionamiento adecuado del proceso implementado, el ejemplo más claro de este diseño fue la implementación de código para poder mostrar el dato de la cantidad de cafés servidos en un Display LCD, el cual necesita de una configuración en código para poder funcionar de manera adecuada. Este código se documenta a continuación:
 
@@ -149,14 +153,13 @@ void sketch_loop()
 
 Además de este caso donde se necesita usar código, el diseño es básicamente el mismo que se puede observar en CODESYS, utilizando el mismo tipo de programación visual, basada en contactos y bobinas, y también agregando los bloques de funciones estándar como lo son los TON, y el CTU utilizados en el desarrollo del proceso, ahora, se demostraran las variables de entrada y salida que se usaron para crear el proceso dentro del programa:
 
-![Variables OPEN](Imagenes_Videos/Distribucion_Ent_Sal_OPEn.png)
+![Variables OPEN](Imagenes_Videos/Distribucion_Ent_Sal_OPEN.png)
 
 Luego de tener definidas estas variables, y como se puede observar en la imagen, se le asigno un valor para su ubicación lógica en OPENPLC, lo que significa que esa variable tiene un valor especifico en los pines del Arduino al momento de programar el Arduino con este programa creado, de igual manera, se puede observar a que pin físico corresponde cada entrada o salida de este proceso. 
 
-Despues de haber definido estas variables principales se continuo realizando el resto de la programación del proceso en logica ladder, como ya se habia comentado en la seccion de CODESYS, para finalmente dar con la arquitectura presentada a continuacion, la cual ya tiene incluido los sensores y el codigo especial que se usara para el Display LCD
+Despues de haber definido estas variables principales se continuo realizando el resto de la programación del proceso en logica ladder, como ya se habia comentado en la seccion de CODESYS, para finalmente dar con la arquitectura presentada a continuacion, la cual ya tiene incluido los sensores y el codigo especial que se usara para el Display LCD.
 
-![Variables OPEN](Imagenes_Videos/Distribucion_Ent_Sal_OPEn.png)
-
-##Desarrollo de la implementación
+![Arq_OPEN1](Imagenes_Videos/Arq_OPEN1.png)
+![Arq_OPEN2](Imagenes_Videos/Arq_OPEN2.png)
 
 ##Validación de funcionamiento
