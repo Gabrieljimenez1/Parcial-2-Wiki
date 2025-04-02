@@ -78,3 +78,50 @@ También cabe destacar, que las primeras veces simulo el proceso después de hab
 
 Frente a la implementación fisica del sistema y su montaje, se encontraron bastantes dificultades a la hora de intentar implementarlo, en primera instancia a la hora de intentra pasar la implementación del OpenPLC al Arduino nos encontramos con problemas de peso del archivo, siguiendo con las limitaciones que se dieron, en el momento en donde el codigo estaba completamente funcional para poderlo implementar de manera fisica, el programa OpenPLC daba un error de sincronización el cual no permitió la correcta implementación del sistema y funcionamiento fisico, frente al montaje se iba a utilizar un sensor infrarojo para la detección del vaso y para determinar la capacidad la cual los contenedores se iba a utilizar dos sensores de ultrasónicos donde si la cantidad del liquido simulado (Ya fuese cafe o agua) tuviese un bajo nivel o un nivel nulo, no permitiera el funcionamiento de la cafetera, esto para que no ocurra que se entrege un vaso con solamente la mitad del producto y se cuente como finalizado, siendo asi, una vez los dos ingredientes pasaran al contenedor de mezcla, un motor se encargaría de mezclar el "café" con el agua para finalmente servir el producto, para aclarar el pasode los liquidos entre contenedores, se iba a usar una bomba de agua la cual se encargaría del flujo de los liquidos. Por otro lado, con un sensor infrarojo se tuvo en cuenta una alerta si efectivamente se encontraba en el espacio determinado un vaso para depositar el producto. Finalizando, se iba a tener en cuenta un display el cual mostraría la cantidad de vasos servidos hasta que se vuelva a reiniciar el contador dado que el dueño de la tienda inicie nueva semana o nuevo mes y requiera de iniciar desde 0 y realizar un analisis diferente.
 
+## Roles, Actividades y Contribuciones de los Miembros del Equipo
+
+A continuación, se detallan los roles, actividades desarrolladas y principales contribuciones de cada uno de los integrantes del equipo en la solución alcanzada:
+
+---
+
+### 👤 Juan Manuel Deutsch Torrado  
+**Rol:** Desarrollador principal y Diseñador de maqueta <br><br>
+**Actividades:**  
+- Diseño y desarrollo de la maqueta.  
+- Revisión del funcionamiento en Codesys.  
+- Planteamiento de diagramas secuenciales.  
+- Pruebas de funcionamiento y verificación del sistema integrado.
+  
+**Contribuciones:**  
+- Detectó un error en el planteamiento de los contadores, lo que permitió desbloquear un punto crítico del desarrollo.  
+- Validó el funcionamiento correcto del sistema tras la integración de los módulos.
+
+---
+
+### 👤 Gabriel David Jiménez Mosquera  
+**Rol:** Documentador técnico y Desarrollador principal <br><br>
+**Actividades:**  
+- Diseño e implementación del sistema en OpenPLC.  
+- Manejo y configuración del Arduino Uno.  
+- Redacción y mantenimiento de la documentación técnica en el Wiki.  
+  
+**Contribuciones:**  
+- Optimizó el código para su correcta carga en el Arduino Uno.  
+- Propuso una lógica en OpenPLC sin timers, mejorando la eficiencia del sistema.  
+- Mantuvo actualizada la documentación, facilitando la comprensión del proyecto por parte del equipo.
+
+---
+
+### 👤 César Felipe Giraldo Mora  
+**Rol:** Líder del proyecto y Desarrollador principal  <br><br>
+**Actividades:**  
+- Traducción de los requerimientos funcionales a una solución de ingeniería.  
+- Diseño y desarrollo del diagrama Ladder en Codesys y simulación del HMI.  
+- Documentación técnica en el Wiki.  
+  
+**Contribuciones:**  
+- Estableció la lógica inicial del sistema y realizó el debug del Ladder.  
+- Integró la solución en Codesys y ajustó los parámetros necesarios para la simulación.
+
+---
+
