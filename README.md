@@ -1,13 +1,40 @@
 # Parcial-2-Wiki
 
-## Diseño
+## Introducción
+El presente proyecto tiene como objetivo automatizar el proceso de preparación de café en máquinas dispensadoras industriales, actualmente operadas de manera manual por la empresa Café & Máquinas S.A. Esta automatización busca mejorar la eficiencia operativa, garantizar un control preciso del inventario y permitir una experiencia más segura y confiable para el usuario final.
+
+Para ello, se diseñó e implementó un sistema automático basado en tecnologías de control industrial, utilizando PLC y sensores, junto con una interfaz gráfica HMI desarrollada en CODESYS. El proceso fue validado a través de simulación por tiempo y a traves de sensores el cual fue programado en OpenPLC, que responde a eventos reales mediante sensores conectados a entradas digitales. 
+
+## Levantamiento de requerimientos
+Para el desarrollo de este proyecto, basados en el enunciado por el profesor, se levantan los siguientes items. <br>
+
+**Requisitos funcionales:**
+* Automizar el proceso de preparación de café, eliminando la necesiadad de poner el cafe y el agua en cada ciclo.
+* Interfaz HMI para iniciar/parar el proceso.
+* Sensores de nivel de café y agua.
+* Sensores de presencia de vaso.
+* Contabilización de vasos dispensados.
+* Validación con prototipo físico utilizando OpenPLC. <br>
+
+**Requisitos no funcionales:**
+* Simulación en CODESYS.
+* Validación del prototipo físico.
+
+
+## Diseño de las solución
 
 ![Definicion_Variables](Imagenes_Videos/Definicion_Variables.png)
 
 
 ## Desarrollo de la implementación
 
-Ahora se hablará de la implementación de la solución de CODESYS en el programa OPENPLC.
+### Programación en CODESYS:
+
+<object data="https://jmp.sh/1Cd9AAZM" type="application/pdf" width="700px" height="700px">
+    <embed src="https://jmp.sh/1Cd9AAZM">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://jmp.sh/1Cd9AAZM">Download PDF</a>.</p>
+    </embed>
+</object>
 
 En este programa se implementó la simulación más cercana que se puede a lo que se espera que suceda en el mundo real, es por esta razón que se buscó diseñar el programa de tal forma que ya tuviera todas las implementaciones físicas que son particulares de la solución, es decir, lo ya mencionado anteriormente como lo son sensores, sensor infrarrojo, entre otros componentes. Esto mediante principalmente de la capacidad de integrar código en C++ con la programación Ladder del programa OPENCL, de esta manera, se implementó código buscando el funcionamiento adecuado del proceso implementado, el ejemplo más claro de este diseño fue la implementación de código para poder mostrar el dato de la cantidad de cafés servidos en un Display LCD, el cual necesita de una configuración en código para poder funcionar de manera adecuada. Este código se documenta a continuación:
 
