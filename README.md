@@ -29,9 +29,18 @@ Para el desarrollo de este proyecto, basados en el enunciado por el profesor, se
 ## Desarrollo de la implementación
 
 ### Programación en CODESYS:
+En la documentación del Codesys se explica cada una de las redes creadas y las variables utilizadas, este enfoque se centra en una aproximación de proceso controlado por tiempo.
+
+![Codesys1](Imagenes_Videos/Codesys1.jpg)
+![Codesys2](Imagenes_Videos/Codesys2.jpg)
+![Codesys3](Imagenes_Videos/Codesys3.jpg)
+![Codesys4](Imagenes_Videos/Codesys4.jpg)
+![Codesys5](Imagenes_Videos/Codesys5.jpg)
+![Codesys6](Imagenes_Videos/Codesys6.jpg)
+![Codesys7](Imagenes_Videos/Codesys7.jpg)
 
 
-
+### Programación en OPENPLC:
 En este programa se implementó la simulación más cercana que se puede a lo que se espera que suceda en el mundo real, es por esta razón que se buscó diseñar el programa de tal forma que ya tuviera todas las implementaciones físicas que son particulares de la solución, es decir, lo ya mencionado anteriormente como lo son sensores, sensor infrarrojo, entre otros componentes. Esto mediante principalmente de la capacidad de integrar código en C++ con la programación Ladder del programa OPENCL, de esta manera, se implementó código buscando el funcionamiento adecuado del proceso implementado, el ejemplo más claro de este diseño fue la implementación de código para poder mostrar el dato de la cantidad de cafés servidos en un Display LCD, el cual necesita de una configuración en código para poder funcionar de manera adecuada. Este código se documenta a continuación:
 
 ```c++
