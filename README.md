@@ -64,8 +64,7 @@ En esta simulación se plantea que la tapa delantera se active o desactive para 
 ![Cafetera Sin Tapa](Imagenes_Videos/CafeteraTapa.png) <br><br><br><br>
 ![Cafetera Sin Tapa](Imagenes_Videos/CafeteraSinTapa.jpeg) 
 
-
-
+El HMI nos peermite ver las distintas fases del proyecto, y como se comporta ante situaciones criticas como la auscencia de agua o cafe, o si la tasa no esta como se comporta, todos los estados que se plantean en el diagrama secuencial. Para la animación confirmamos que las valvulas de salida debia eventualmente apagarse y ya que teniamos un contador con PV 1, y ahí se quedaba.
 
 En las primeras pruebas, aun sin usar el código para convertir la señal de la salida del contador a algo entendible por el Display LCD, se encontró un error en la programación, el cual consiste en el pin "PV" del CTU, ya que originalmente se tenía un valor de 1, para que el CTU lo contara como satisfactorio y avanzara con la lógica, para así poder activar el reinicio de "Valve_Out", sin embargo, esta disposición no lograba permitir que el CTU contara más allá de 1, por lo cual se decidió por dar un valor más alto, casi imposible para una cafetera de este tipo, para así evitar el problema ya mencionado, el valor elegido fue 1000.
 
