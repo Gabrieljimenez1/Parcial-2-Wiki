@@ -56,9 +56,12 @@ Despues de haber definido estas variables principales se continuo realizando el 
 
 ## Validación de funcionamiento
 
+![Cafetera Sin Tapa](Imagenes_Videos/CafeteraSinTapa.jpeg)
+Como primer acercamiento a validar el correcto funcionamiento del programa, usando OPENPLC, se comenzaron a hacer pruebas de simulación desde la visualización, ya que se quería comprobar que lo implementado en CODESYS funcionará de manera correcta. Esta simulación cumple un papel fundamental en el proceso de diseño ingenieril, ya que permite evaluar el comportamiento de cada etapa del proceso bajo condiciones controladas, sin necesidad de contar inicialmente con todos los componentes físicos. Para esto se utilizaron botones y leds que utilizaban las variables que ya habiamos asignado, además de negar algunas para poder utilizarlo con función de invisible, que lo mantiene mientras este en TRUE.
+![Cafetera Sin Tapa](Imagenes_Videos/CafeteraTapa.png)
 
 
-Como primer acercamiento a validar el correcto funcionamiento del programa, usando OPENPLC, se comenzaron a hacer pruebas de simulación desde la visualización, ya que se quería comprobar que lo implementado en CODESYS funcionára de manera correcta. Esta simulación cumple un papel fundamental en el proceso de diseño ingenieril, ya que permite evaluar el comportamiento de cada etapa del proceso bajo condiciones controladas, sin necesidad de contar inicialmente con todos los componentes físicos. Para esto se utilizaron botones y leds que utilizaban las variables que ya habiamos asignado, además de negar algunas para poder utilizarlo con función de invisible, que lo mantiene mientras este en TRUE. 
+En esta simulación se plantea que la tapa delantera se active o desactive para poder ver el proceso con la logica por dentro, en este caso la variable Process_Active es la que se usa ya que mientras el proceso este activo, hace invisible. 
 
 En las primeras pruebas, aun sin usar el código para convertir la señal de la salida del contador a algo entendible por el Display LCD, se encontró un error en la programación, el cual consiste en el pin "PV" del CTU, ya que originalmente se tenía un valor de 1, para que el CTU lo contara como satisfactorio y avanzara con la lógica, para así poder activar el reinicio de "Valve_Out", sin embargo, esta disposición no lograba permitir que el CTU contara más allá de 1, por lo cual se decidió por dar un valor más alto, casi imposible para una cafetera de este tipo, para así evitar el problema ya mencionado, el valor elegido fue 1000.
 
