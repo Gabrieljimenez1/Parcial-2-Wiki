@@ -25,6 +25,10 @@ Para el desarrollo de este proyecto, basados en el enunciado por el profesor, se
 
 ![Definicion_Variables](Imagenes_Videos/Variables.png)
 
+![Diagrama_Secuencial](Imagenes_Videos/Diagrama_Secuencial.png)
+
+![Diagrama_Electrico](Imagenes_Videos/Diagrama_Electrico.png)
+
 
 ## Desarrollo de la implementación
 
